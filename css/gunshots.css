@@ -1,0 +1,58 @@
+path {
+  fill: none;
+  stroke: #000;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.land {
+  fill: #f0f0f0;
+}
+
+.border {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.bubble {
+  fill-opacity: .5;
+  stroke: #c51b8a;
+  stroke-width: .5px;
+}
+
+.legend circle {
+  fill: none;
+  stroke: #ccc;
+}
+
+.legend text {
+  fill: #777;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.countyData{
+  fill: #c51b8a;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 200px;
+  height: 60px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+h1{
+  font-family: 'Baskerville';
+  text-align: left;
+}

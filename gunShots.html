@@ -1,0 +1,227 @@
+<!DOCTYPE html5>
+<meta charset="utf-8">
+<style>
+  path {
+    fill: none;
+    stroke: #000;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  .land {
+    fill: #f0f0f0;
+  }
+
+  .border {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  .bubble {
+    fill-opacity: .5;
+    stroke: #c51b8a;
+    stroke-width: .5px;
+  }
+
+  .legend circle {
+    fill: none;
+    stroke: #ccc;
+  }
+
+  .legend text {
+    fill: #777;
+    font: 10px sans-serif;
+    text-anchor: middle;
+  }
+
+  .gunshot{
+    fill: #c51b8a;
+  }
+
+  div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 200px;
+    height: 60px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+</style>
+
+<body>
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+
+<div id="radios">
+</div>
+
+<script>
+
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var width = 960,
+    height = 600;
+
+var path = d3.geo.path()
+    .projection(null);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("gunbuild/us.json", function(error, us) {
+  if (error) return console.error(error);
+
+  svg.append("path")
+    .datum(topojson.feature(us, us.objects.nation))
+    .attr("class", "land")
+    .attr("d", path);
+
+  svg.append("path")
+    .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+    .attr("class", "border border--state")
+    .attr("d", path);
+
+  var radioValues = ['male', 'female', 'all'];
+
+  var genders = d3.select("#radios");
+
+  var genderRBs = genders.selectAll().data(radioValues)
+    .enter().append("span");
+  genderRBs.append("input")
+      .attr("type", "radio")
+      .attr("name", "gender")
+      .attr("value", function(d){ return d })
+      .attr("class", "gender");
+  genderRBs.append("label").text(function(d){ return d; });
+  d3.select('input[value="all"]').node().checked = true
+
+  d3.selectAll(".gender")
+    .on("click", function(d){
+      this.checked = true;
+      insertCircles(us);
+    });
+
+  insertCircles(us);
+
+  function insertCircles(us){
+    var selection = d3.select('input[name="gender"]:checked').node().value;
+    svg.selectAll(".gunshot").remove();
+    svg.select(".legend").remove();
+
+/*
+    var max = d3.max(us.objects.counties.geometries, function(d){
+      var males = 0, females = 0;
+      if (d.properties.males != null && d.properties.males != undefined)
+        males = d.properties.males;
+      if (d.properties.females != null && d.properties.females != undefined)
+          females = d.properties.females;
+
+      if (selection == "all")
+        return males + females;
+      else if (selection == "males")
+        return males;
+      else {
+        return females;
+      }
+    });
+
+
+    var min = d3.min(us.objects.counties.geometries, function(d){
+      var males = 0, females = 0;
+      if (d.properties.males != null && d.properties.males != undefined)
+        males = d.properties.males;
+      if (d.properties.females != null && d.properties.females != undefined)
+          females = d.properties.females;
+
+      if (selection == "all")
+        return males + females;
+      else if (selection == "males")
+        return males;
+      else {
+        return females;
+      }
+    });
+*/
+    var radius = d3.scale.sqrt()
+        .domain([0, 400])
+        .range([0, 100]);
+
+    svg.append("g")
+        .attr("class", "bubble")
+      .selectAll("circle")
+        .data(topojson.feature(us, us.objects.counties).features
+          .sort(function(a, b) {
+            if (selection == "all")
+              return (b.properties.males + b.properties.females) - (a.properties.males + a.properties.females);
+            else if (selection == "males")
+              return b.properties.males - a.properties.males;
+            else return b.properties.females - a.properties.females;
+          }))
+      .enter().append("circle")
+        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+        .attr("class", "gunshot")
+        .attr("r", function(d) {
+
+          var males = 0, females = 0;
+          if (d.properties.males != null && d.properties.males != undefined)
+            males = d.properties.males;
+          if (d.properties.females != null && d.properties.females != undefined)
+            females = d.properties.females;
+
+           if (selection == "all")
+            return radius(males + females);
+           else if (selection == "male")
+            return radius(males);
+           else
+            return radius(females);
+        })
+        .on("mouseover", function(d){
+          div.transition()
+              .duration(200)
+              .style("opacity", .9);
+          div.html(d.properties.name + "<br/>" +
+                   "Males:" + d.properties.males + "<br/>" +
+                   "Females:" + d.properties.females + "<br/>" +
+                   "Total:" + (d.properties.males + d.properties.females)  + "<br/>")
+             .style("left", (d3.event.pageX) + "px")
+             .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+          div.transition()
+          .duration(500)
+          .style("opacity", 0);
+        });
+
+    var legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(" + (width - 50) + "," + (height - 20) + ")")
+      .selectAll("g")
+        .data([10, 50, 100])
+      .enter().append("g");
+
+    legend.append("circle")
+        .attr("cy", function(d) { return -radius(d); })
+        .attr("r", radius);
+
+    legend.append("text")
+        .attr("y", function(d) { return -2 * radius(d); })
+        .attr("dy", "1.3em")
+        .text(d3.format(".1s"));
+  }
+
+
+
+});
+
+</script>

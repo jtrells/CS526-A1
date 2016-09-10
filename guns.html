@@ -1,0 +1,24 @@
+<!DOCTYPE html5>
+<meta charset="utf-8">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/gunshots.css"/>
+  <script src="js/gunshotsmap.js"></script>
+</head>
+<body>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+
+    <div class="header"><h1>How many people have been killed by guns?</h1></div>
+    <div id="controls"></div>
+    <div id="map"></div>
+
+    <script>
+        d3.json("gunbuild/us.json", function(error, data) {
+            if (error) return console.error(error);
+
+            var map = new GunShotsMap('#map', '#controls', 1200, 700, data);
+            map.init();
+        });
+    </script>
+</body>
