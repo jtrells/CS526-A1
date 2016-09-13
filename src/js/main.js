@@ -5,7 +5,7 @@ var App = App || {};
 
 (function(){
 
-    // iife gloabal
+    // iife global
     var self = this || {};
 
     App.initMap = function() {

@@ -1,0 +1,380 @@
+[
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "CYCLE_DESCRIPTION",
+    "Field_Value": "2012-2013 ACT ASSESSMENT",
+    "Frequency": 27984,
+    "Percent": 34.21,
+    "Cumulative Frequency": 27984,
+    "Cumulative Percent": 34.21
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "CYCLE_DESCRIPTION",
+    "Field_Value": "2013-2014 ACT ASSESSMENT",
+    "Frequency": 26971,
+    "Percent": 32.97,
+    "Cumulative Frequency": 54955,
+    "Cumulative Percent": 67.18
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "CYCLE_DESCRIPTION",
+    "Field_Value": "2014-2015 ACT ASSESSMENT",
+    "Frequency": 26845,
+    "Percent": 32.82,
+    "Cumulative Frequency": 81800,
+    "Cumulative Percent": 100
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ADMIN_GROUP",
+    "Field_Value": "OCT AAP",
+    "Frequency": 16297,
+    "Percent": 19.92,
+    "Cumulative Frequency": 16297,
+    "Cumulative Percent": 19.92
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ADMIN_GROUP",
+    "Field_Value": "APR AAP",
+    "Frequency": 14618,
+    "Percent": 17.87,
+    "Cumulative Frequency": 30915,
+    "Cumulative Percent": 37.79
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ADMIN_GROUP",
+    "Field_Value": "DEC AAP",
+    "Frequency": 14328,
+    "Percent": 17.52,
+    "Cumulative Frequency": 45243,
+    "Cumulative Percent": 55.31
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ADMIN_GROUP",
+    "Field_Value": "FEB AAP",
+    "Frequency": 12861,
+    "Percent": 15.72,
+    "Cumulative Frequency": 58104,
+    "Cumulative Percent": 71.03
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ADMIN_GROUP",
+    "Field_Value": "JUN AAP",
+    "Frequency": 12358,
+    "Percent": 15.11,
+    "Cumulative Frequency": 70462,
+    "Cumulative Percent": 86.14
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ADMIN_GROUP",
+    "Field_Value": "SEP AAP",
+    "Frequency": 11338,
+    "Percent": 13.86,
+    "Cumulative Frequency": 81800,
+    "Cumulative Percent": 100
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ASSIGNED_SPECIAL_FL",
+    "Field_Value": "N",
+    "Frequency": 43992,
+    "Percent": 53.78,
+    "Cumulative Frequency": 43992,
+    "Cumulative Percent": 53.78
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "ASSIGNED_SPECIAL_FL",
+    "Field_Value": "Y",
+    "Frequency": 37808,
+    "Percent": 46.22,
+    "Cumulative Frequency": 81800,
+    "Cumulative Percent": 100
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "10/1/2012",
+    "Frequency": 5581,
+    "Percent": 6.82,
+    "Cumulative Frequency": 5581,
+    "Cumulative Percent": 6.82
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "10/1/2013",
+    "Frequency": 5377,
+    "Percent": 6.57,
+    "Cumulative Frequency": 10958,
+    "Cumulative Percent": 13.4
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "10/1/2014",
+    "Frequency": 5339,
+    "Percent": 6.53,
+    "Cumulative Frequency": 16297,
+    "Cumulative Percent": 19.92
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "4/1/2014",
+    "Frequency": 5060,
+    "Percent": 6.19,
+    "Cumulative Frequency": 21357,
+    "Cumulative Percent": 26.11
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "12/1/2012",
+    "Frequency": 4957,
+    "Percent": 6.06,
+    "Cumulative Frequency": 26314,
+    "Cumulative Percent": 32.17
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "4/1/2013",
+    "Frequency": 4835,
+    "Percent": 5.91,
+    "Cumulative Frequency": 31149,
+    "Cumulative Percent": 38.08
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "12/1/2014",
+    "Frequency": 4794,
+    "Percent": 5.86,
+    "Cumulative Frequency": 35943,
+    "Cumulative Percent": 43.94
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "4/1/2015",
+    "Frequency": 4723,
+    "Percent": 5.77,
+    "Cumulative Frequency": 40666,
+    "Cumulative Percent": 49.71
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "12/1/2013",
+    "Frequency": 4577,
+    "Percent": 5.6,
+    "Cumulative Frequency": 45243,
+    "Cumulative Percent": 55.31
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "2/1/2013",
+    "Frequency": 4442,
+    "Percent": 5.43,
+    "Cumulative Frequency": 49685,
+    "Cumulative Percent": 60.74
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "2/1/2015",
+    "Frequency": 4303,
+    "Percent": 5.26,
+    "Cumulative Frequency": 53988,
+    "Cumulative Percent": 66
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "6/1/2013",
+    "Frequency": 4229,
+    "Percent": 5.17,
+    "Cumulative Frequency": 58217,
+    "Cumulative Percent": 71.17
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "2/1/2014",
+    "Frequency": 4116,
+    "Percent": 5.03,
+    "Cumulative Frequency": 62333,
+    "Cumulative Percent": 76.2
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "6/1/2014",
+    "Frequency": 4095,
+    "Percent": 5.01,
+    "Cumulative Frequency": 66428,
+    "Cumulative Percent": 81.21
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "6/1/2015",
+    "Frequency": 4034,
+    "Percent": 4.93,
+    "Cumulative Frequency": 70462,
+    "Cumulative Percent": 86.14
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "9/1/2012",
+    "Frequency": 3940,
+    "Percent": 4.82,
+    "Cumulative Frequency": 74402,
+    "Cumulative Percent": 90.96
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "9/1/2013",
+    "Frequency": 3746,
+    "Percent": 4.58,
+    "Cumulative Frequency": 78148,
+    "Cumulative Percent": 95.54
+  },
+  {
+    "FileName": "ACT_TestEvents",
+    "Field_Name": "TESTDATE",
+    "Field_Value": "9/1/2014",
+    "Frequency": 3652,
+    "Percent": 4.46,
+    "Cumulative Frequency": 81800,
+    "Cumulative Percent": 100
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "POINTTYPE",
+    "Field_Value": "ZIP",
+    "Frequency": 31399,
+    "Percent": 80.27,
+    "Cumulative Frequency": 31399,
+    "Cumulative Percent": 80.27
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "POINTTYPE",
+    "Field_Value": "TESTCENTER",
+    "Frequency": 7719,
+    "Percent": 19.73,
+    "Cumulative Frequency": 39118,
+    "Cumulative Percent": 100
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "",
+    "Frequency": 31399,
+    "Percent": 80.27,
+    "Cumulative Frequency": 31399,
+    "Cumulative Percent": 80.27
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "HIGH SCHOOL",
+    "Frequency": 6530,
+    "Percent": 16.69,
+    "Cumulative Frequency": 37929,
+    "Cumulative Percent": 96.96
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "4 YR COLLEGE/UNIVERSITY",
+    "Frequency": 493,
+    "Percent": 1.26,
+    "Cumulative Frequency": 38422,
+    "Cumulative Percent": 98.22
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "2 YR COMM COLLEGE",
+    "Frequency": 406,
+    "Percent": 1.04,
+    "Cumulative Frequency": 38828,
+    "Cumulative Percent": 99.26
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "JR HIGH/MIDDLE SCHOOL",
+    "Frequency": 114,
+    "Percent": 0.29,
+    "Cumulative Frequency": 38942,
+    "Cumulative Percent": 99.55
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "OTHER",
+    "Frequency": 109,
+    "Percent": 0.28,
+    "Cumulative Frequency": 39051,
+    "Cumulative Percent": 99.83
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "TECH HIGH SCHOOL",
+    "Frequency": 29,
+    "Percent": 0.07,
+    "Cumulative Frequency": 39080,
+    "Cumulative Percent": 99.9
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "TECH COLLEGE",
+    "Frequency": 23,
+    "Percent": 0.06,
+    "Cumulative Frequency": 39103,
+    "Cumulative Percent": 99.96
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "ELEMENTARY SCHOOL",
+    "Frequency": 10,
+    "Percent": 0.03,
+    "Cumulative Frequency": 39113,
+    "Cumulative Percent": 99.99
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "MILITARY FACILITY",
+    "Frequency": 3,
+    "Percent": 0.01,
+    "Cumulative Frequency": 39116,
+    "Cumulative Percent": 99.99
+  },
+  {
+    "FileName": "ACT_AllPointsFile",
+    "Field_Name": "TCTYPE",
+    "Field_Value": "CORRECTIONAL INSTITUTION",
+    "Frequency": 2,
+    "Percent": 0.01,
+    "Cumulative Frequency": 39118,
+    "Cumulative Percent": 100
+  }
+]
