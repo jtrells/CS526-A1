@@ -1,105 +1,42 @@
-<!DOCTYPE html5>
+<html>
 <meta charset="utf-8">
-<style>
-  path {
-    fill: none;
-    stroke: #000;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-  }
 
-  .land {
-    fill: #ddd;
-  }
+<head>
 
-  .border {
-    fill: none;
-    stroke: #fff;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-  }
+    <!-- CSS Libs-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="./lib/css/tether-theme-basic.min.css" />
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
 
-  .bubble {
-    fill-opacity: .5;
-    stroke: #fff;
-    stroke-width: .5px;
-  }
+    <!-- JS Libs-->
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
 
-  .legend circle {
-    fill: none;
-    stroke: #ccc;
-  } 
+    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
 
-  .legend text {
-    fill: #777;
-    font: 10px sans-serif;
-    text-anchor: middle;
-  }
-</style>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" ></script>
+    <script src="./lib/js/tether.min.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
 
-<body>
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
-<script>
+    <!-- CSS SRC-->
+    <link rel="stylesheet" href="./src/css/main.css" />
 
-var width = 960,
-    height = 600;
+    <!--JS SRC-->
+    <script src="./src/js/main.js"></script>
 
-var path = d3.geo.path()
-    .projection(null);
+</head>
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+<body onload="App.initMap()">
 
-d3.json("us.json", function(error, us) {
-  if (error) return console.error(error);
+    <!-- Map Div -->
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-md-6 mapDiv">
+                <div id="mapid"></div>
+            </div>
+        </div>
+    </div>
 
-/*
-  svg.append("path")
-        .datum(topojson.mesh(us))
-        .attr("d", path)
-*/
+</body>
 
-var radius = d3.scale.sqrt()
-    .domain([0, 1e6])
-    .range([0, 15]);
-
-  svg.append("path")
-    .datum(topojson.feature(us, us.objects.nation))
-    .attr("class", "land")
-    .attr("d", path);
-
-  svg.append("path")
-    .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-    .attr("class", "border border--state")
-    .attr("d", path);
-
-  svg.append("g")
-      .attr("class", "bubble")
-    .selectAll("circle")
-      .data(topojson.feature(us, us.objects.counties).features
-        .sort(function(a, b) { return b.properties.population - a.properties.population; }))
-    .enter().append("circle")
-      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-      .attr("r", function(d) { return radius(d.properties.population); });
-
-  var legend = svg.append("g")
-      .attr("class", "legend")
-      .attr("transform", "translate(" + (width - 50) + "," + (height - 20) + ")")
-    .selectAll("g")
-      .data([1e6, 3e6, 6e6])
-    .enter().append("g");
-
-  legend.append("circle")
-      .attr("cy", function(d) { return -radius(d); })
-      .attr("r", radius);
-
-  legend.append("text")
-      .attr("y", function(d) { return -2 * radius(d); })
-      .attr("dy", "1.3em")
-      .text(d3.format(".1s"));
-
-});
-
-</script>
+</html>
