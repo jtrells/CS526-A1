@@ -29,6 +29,7 @@ def get_location_info(zip_code, zip_df):
 print('init')
 
 zip_df = pd.read_csv('../data/us_postal_codes.csv')
+tests_df = pd.read_csv('../data/ACT_TestEvents.csv')
 
 with open('../data/ACT_AllPointsFile.csv', 'r') as csvinput:
     reader = csv.reader(csvinput)
@@ -36,7 +37,7 @@ with open('../data/ACT_AllPointsFile.csv', 'r') as csvinput:
     zip_codes = []
 
     test_centers.append(['POINT_ID', 'ZIP_CODE', 'LAT', 'LONG', 'TEST_CENTER_ID', 'CENTER_TYPE', 'INSTITUTION', 'CITY',
-                         'COUNTY', 'STATE', 'STATE_ABBREVIATION'])
+                         'COUNTY', 'STATE', 'STATE_ABBREVIATION', 'CAPACITY'])
     zip_codes.append(['POINT_ID', 'ZIP_CODE', 'LAT', 'LONG', 'POPULATION', 'CITY', 'COUNTY', 'STATE',
                      'STATE_ABBREVIATION'])
 
@@ -56,19 +57,21 @@ with open('../data/ACT_AllPointsFile.csv', 'r') as csvinput:
 
         if city is not None:
             if point_type == "TESTCENTER":
+                cap_row = tests_df[tests_df['TestCenterID'] == int(test_center_id)]
+                capacity = cap_row['CAPACITY'].values[0]
                 test_centers.append([point_id, zip_code, latitude, longitude, test_center_id, center_type, institution,
-                                     city, county, state, short_state])
+                                     city, county, state, short_state, capacity])
             else:
                 zip_codes.append([point_id, zip_code, latitude, longitude, population, city, county, state,
                                   short_state])
     csvinput.close()
 
-with open('../data/test_centers.csv', 'w') as csv_output:
+with open('../data/test_centers2.csv', 'w') as csv_output:
     writer = csv.writer(csv_output, lineterminator='\n')
     writer.writerows(test_centers)
     csv_output.close()
 
-with open('../data/zip_codes.csv', 'w') as csv_output:
+with open('../data/zip_codes.csv2', 'w') as csv_output:
     writer = csv.writer(csv_output, lineterminator='\n')
     writer.writerows(zip_codes)
     csv_output.close()
