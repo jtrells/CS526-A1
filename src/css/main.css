@@ -32,3 +32,84 @@ path {
     font: 10px sans-serif;
     text-anchor: middle;
 }
+
+.us-state-cmp{
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+header{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 80px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 72px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.subhead{
+    text-transform: uppercase;
+    border-bottom: 2px solid #2f2f2f;
+    border-top: 2px solid #2f2f2f;
+    padding: 12px 0 12px 0;
+    margin-bottom: 30px;
+}
+
+.subtitle{
+    text-align: center;
+    font-family: Baskerville;
+    font-size: 45px;
+}
+
+.head{
+    text-align: center;
+    position: relative;
+}
+
+.head-summary {
+    text-align: center;
+    position: relative;
+
+}
+
+.head2{
+    text-align: left;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.headline{
+    font-family: 'Abril Fatface', serif;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+}
+
+.headline2{
+    font-family: 'Anton', serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 10px 0 10px 0;
+    word-wrap: break-word;
+    line-height: 1;
+
+    border-top: solid;
+    border-bottom: none;
+    border-width: 3px;
+    margin-left: 10px;
+}
+
+.left-container-section{
+    border-right: solid;
+    border-width: medium;
+}
+
+.left-container-area{
+    border-right: solid;
+    border-width: thin;
+}
